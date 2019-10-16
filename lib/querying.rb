@@ -34,6 +34,7 @@ def select_series_title_with_most_human_characters
   ON series.author_id = authors.id 
   JOIN characters
   ON authors.id = characters.author_id 
+  COUNT characters.species 
   WHERE characters.species = 'human' 
   "
 end
