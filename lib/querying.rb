@@ -22,25 +22,7 @@ def select_name_and_series_subgenres_of_authors
   "SELECT authors.name, series.subgenre 
    FROM authors 
    JOIN series 
-   ON 
-   
-  
-  
-  CREATE TABLE Series (
- id INTEGER PRIMARY KEY,
- title TEXT,
- author_id INTEGER,
- subgenre_id INTEGER
- );
-
-
-CREATE TABLE Authors (
- id INTEGER PRIMARY KEY,
- name TEXT 
- );
-
-  
-  "
+   ON authors.id = series.author_id;"
 end
 
 def select_series_title_with_most_human_characters
