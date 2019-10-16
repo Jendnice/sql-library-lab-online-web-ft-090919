@@ -35,8 +35,8 @@ def select_series_title_with_most_human_characters
   JOIN characters
   ON authors.id = characters.author_id 
   WHERE characters.species = 'human' 
-  ORDER BY (COUNT(Characters.species))
-  Li
+  ORDER BY (COUNT(Characters.species)) DESC 
+  LIMIT 1
   "
 end
 
