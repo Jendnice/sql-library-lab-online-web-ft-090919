@@ -31,8 +31,9 @@ def select_series_title_with_most_human_characters
   "SELECT series.title
   FROM series
   JOIN authors
-  ON series.
+  ON series.author_id = authors.id 
   JOIN characters
+  ON authors 
   "
 end
 
